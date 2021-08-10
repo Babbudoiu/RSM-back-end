@@ -16,7 +16,7 @@ const menuSchema = new mongoose.Schema({
     dietary: {
         type: Array,
         default: [false,false,false,false,false],
-    }
+    },
 });
 
 const Menu = mongoose.model("Menu", menuSchema);
