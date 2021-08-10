@@ -13,6 +13,10 @@ const menuSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
+    dietary: {
+        type: Array,
+        default: [false,false,false,false,false],
+    }
 });
 
 const Menu = mongoose.model("Menu", menuSchema);
