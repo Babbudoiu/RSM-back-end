@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const menuSchema = new mongoose.Schema({
     course: {
         type: String,
-        require: true,
+        required: true,
     },
     name: {
         type: String,

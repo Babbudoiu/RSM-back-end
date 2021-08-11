@@ -10,7 +10,7 @@ exports.createItem = async (req, res) => {
     }
 };
 
-exports.listMenu = async (req, res) => {
+exports.listMenu = async (res) => {
     try {
         const list = await Menu.find({});
         res.status(200).send(list);
