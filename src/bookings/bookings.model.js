@@ -1,26 +1,15 @@
 const mongoose = require("mongoose");
 
 const bookingsSchema = new mongoose.Schema({
-    time: {
+    day: {
         type: String,
-        required: true,
+        required: true,       
     },
-    custName: {
-        type: String,
-        required: true,
-    },
-    custSurname:{
-        type: String,
-        required: true,
-    },
-    people: {
-        type: String,
-        required: true,
-    },
-    phoneNum: {
-        type: String,
+    dayArray:{
+        type: Array,
         required: true,
     }
+
 });
 
 const Bookings = mongoose.model("Bookings",bookingsSchema);
