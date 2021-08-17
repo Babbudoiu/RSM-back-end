@@ -31,8 +31,11 @@ exports.findItem = async (req, res) => {
 
 exports.deleteItem = async (req, res) => {
     try {
+       
         const name = req.params.name;
+        console.log(name,2)
         const removeItem = await Menu.findOneAndDelete({name: name});
+        console.log(removeItem)
         res.status(200).send({ name: removeItem, message: 'Menu item deleted from database' });
     } catch (error) {
         res.status(500).send(error);
