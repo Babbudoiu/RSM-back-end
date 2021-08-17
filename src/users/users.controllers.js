@@ -27,6 +27,7 @@ exports.findUser = async (req, res) => {
 
 exports.deleteUser = async (req,res) => {
     try {
+        console.log(req.params.username)
         const user = req.params.username;
         const filter = req.params.username;
         const removeUser = await User.findOneAndDelete( {name: filter},{name: user});
